@@ -11,7 +11,7 @@ public class Order {
     private OrderStatus status;
 
     private Client client;
-    List<OrderItem> orderItems = new ArrayList<>();
+    List<OrderItem> items = new ArrayList<>();
 
     public Order() {
     }
@@ -46,18 +46,18 @@ public class Order {
         this.client = client;
     }
 
-    public List<OrderItem> getOrderItems() {
-        return orderItems;
+    public List<OrderItem> getItems() {
+        return items;
     }
 
     public void addItem(OrderItem item) {
-        orderItems.add(item);
+        items.add(item);
     }
     public void removeItem(OrderItem item) {
-        orderItems.remove(item);
+        items.remove(item);
     }
 
     public Double total(){
-        return orderItems.stream().mapToDouble(OrderItem::subTotal).sum();
+        return items.stream().mapToDouble(OrderItem::subTotal).sum();
         }
 }

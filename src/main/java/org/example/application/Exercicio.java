@@ -59,7 +59,7 @@ public class Exercicio {
         System.out.println("Order moment: " + sdf2.format(orderMoment));
         System.out.println("Order status: " + order.getStatus());
         System.out.println(order.getClient());
-        System.out.println(order.getOrderItems());
+        System.out.println(order.getItems());
 
         System.out.printf("$ %.2f%n", order.total());
 
